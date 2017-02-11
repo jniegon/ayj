@@ -5,40 +5,64 @@
  */
 
 body {
-	margin-top: 50px;
-	margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     background: url(../img/cactus_footer.jpg) no-repeat center bottom fixed;
 	
 }
 
 .wrap {
-   padding-top: 50px;
-   background: url(../img/festiveFlagsTop.jpg) no-repeat center top; 
+    padding-top: 50px;
+    #background: url(../img/festiveFlagsTop.jpg) no-repeat center top; 
+}
+.cactus-baskerville {	
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-size: 18px;
+	font-style: italic;
+	font-variant: normal;
+	font-weight: 400;	
+}
+
+.cactus-futura {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
 }
 
 .navbar-cactus {
-   background-color: #94974a;
-   border-color: #94974a;
-}
+    #background-color: #536f44, d1d8ac;
+    border-color: #536f44;
+    background-color: #ffffff;
+   
+   }
 
 .navbar-cactus .navbar-nav > li > a {
-   color: #ffffff;
+    #color: #ffffff;
+    color: #536f44;
 }
 
 .navbar-cactus .navbar-nav > li > a:hover,
 .navbar-cactus .navbar-nav > li > a:focus {
-   color: #ffffff;
-   background-color: #76783a;
+    color: #ffffff;
+    background-color: #536f44;
 }
 
 .navbar-cactus .navbar-nav>.open>a, 
 .navbar-cactus .navbar-nav>.open>a:focus, 
 .navbar-cactus .navbar-nav>.open>a:hover {
-    color: #fff;
-    background-color: #76783a;
+    color: #ffffff;
+    background-color: #536f44;
 }
 
 .navbar-cactus .navbar-brand {
-   color: #ffffff;
+    color: #536f44; 	
 }
+
+.navbar-cactus .navbar-brand:focus,
+.navbar-cactus .navbar-brand:hover{
+    color: #ffffff;
+    background-color: #536f44;  	
+}
+
 
