@@ -97,8 +97,10 @@
 				<p class="text-center">Spicewood, TX</p>
 
 			</div>
-            <div class="col-md-6 col-sm-12">
-			    <img src="img/polaroid.jpg"></img>
+            <div id="polaroid-container" class="col-md-6 col-sm-12">
+			    <img id="centralValley" src="img/centralValley.jpg"></img>
+			    <img id="centralValleyKiss" class="hidden" src="img/centralValleyKiss-crooked.jpg" style="padding:40px;"></img>
+				
 			</div>
 			
         </div>
@@ -113,7 +115,22 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+	
+    <script>
+	    $("#polaroid-container").mouseover(function () {
+            $("#centralValley").hide();
+			$("#centralValleyKiss").removeClass("hidden");			
+			$("#centralValleyKiss").show();
+        })
+		$("#polaroid-container").mouseout(function () {
+            $("#centralValleyKiss").hide();
+			$("#centralValley").show();
+        });
+    </script>	
  
 </body>
 
 </html>
+
+
+<script type=>
