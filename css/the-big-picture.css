@@ -12,12 +12,12 @@ body {
 }
 
 .wrap {
-    padding-top: 50px;
+    #padding-top: 50px;
     #background: url(../img/festiveFlagsTop.jpg) no-repeat center top; 
 }
 .cactus-baskerville {	
 	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
-	font-size: 18px;
+	font-size: 24px;
 	font-style: italic;
 	font-variant: normal;
 	font-weight: 400;	
@@ -27,18 +27,18 @@ body {
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: bold;
+	font-weight: 400;
 }
 
+
 .navbar-cactus {
-    #background-color: #536f44, d1d8ac;
     border-color: #536f44;
     background-color: #ffffff;
+	font-size: 18px;
    
    }
 
 .navbar-cactus .navbar-nav > li > a {
-    #color: #ffffff;
     color: #536f44;
 }
 
@@ -66,3 +66,11 @@ body {
 }
 
 
+.intro-names {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	font-size: 50px;
+    letter-spacing: 10px;	
+}
