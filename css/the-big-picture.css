@@ -48,6 +48,11 @@ body {
     background-color: #536f44;
 }
 
+.navbar-cactus .navbar-nav > li > a.language-flag:hover,
+.navbar-cactus .navbar-nav > li > a.language-flag:focus {
+    background-color: #ffffff;
+}
+
 .navbar-cactus .navbar-nav>.open>a, 
 .navbar-cactus .navbar-nav>.open>a:focus, 
 .navbar-cactus .navbar-nav>.open>a:hover {
