@@ -7,14 +7,10 @@
 body {
     margin-top: 50px;
     margin-bottom: 50px;
-    background: url(../img/cactus_footer.jpg) no-repeat center bottom fixed;
+	height: 100%;
 	
 }
 
-.wrap {
-    #padding-top: 50px;
-    #background: url(../img/festiveFlagsTop.jpg) no-repeat center top; 
-}
 .cactus-baskerville {	
 	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 	font-size: 24px;
