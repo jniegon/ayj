@@ -75,3 +75,10 @@ body {
 	font-size: 50px;
     letter-spacing: 10px;	
 }
+
+#friday-sign-small,
+#friday-sign-big,
+#sunday-sign-small,
+#sunday-sign-big {
+    cursor: pointer;
+}
