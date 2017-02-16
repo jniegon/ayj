@@ -103,10 +103,10 @@
                 <div class="btn-group" data-toggle="buttons">
               
                   <label class="btn attending-input">
-                    <input type="radio" name='attending' data="yes"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> YES</span>
+                    <input type="radio" name='attending' data="yes" required><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> YES</span>
                   </label>
                   <label class="btn attending-input">
-                    <input type="radio" name='attending' data="no"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> NO</span>
+                    <input type="radio" name='attending' data="no" required><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> NO</span>
                   </label>
 			    </div>				
 			</div>
@@ -138,10 +138,10 @@
                     <span>Preferred meal</span>						
                     <div class="btn-group" data-toggle="buttons">
                       <label class="btn meal1-input">
-                        <input type="radio" name='meal1' data="beef"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Beef</span>
+                        <input type="radio" name='adult1-meal' data="beef"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Beef</span>
                       </label>
                       <label class="btn meal1-input">
-                        <input type="radio" name='meal1' data="seabass"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Seabass</span>
+                        <input type="radio" name='adult1-meal' data="seabass"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Seabass</span>
                       </label>              
                     </div>
               	  </div>
@@ -157,10 +157,10 @@
                     <span>Preferred meal</span>						
                     <div class="btn-group" data-toggle="buttons">
                       <label class="btn meal2-input">
-                        <input type="radio" name='meal2' data="beef"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Beef</span>
+                        <input type="radio" name='adult2-meal' data="beef"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Beef</span>
                       </label>
                       <label class="btn meal2-input">
-                        <input type="radio" name='meal2' data="seabass"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Seabass</span>
+                        <input type="radio" name='adult2-meal' data="seabass"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Seabass</span>
                       </label>              
                     </div>
               	  </div>
@@ -239,7 +239,7 @@
 				
 			    <div class="form-group form-inline">
 			      <span>Name</span>
-			  	<input id="name-input" type="text" name="adult-names" class="form-control input-lg" style="width: 70%; margin-left: 45px;">
+			  	<input id="name-motattending-input" type="text" name="adult1-name" class="form-control input-lg" style="width: 70%; margin-left: 45px;">
 			    </div>			
 				
 			  </div>
@@ -286,11 +286,15 @@
 
             if($("input[type=radio][name=attending]").val()=="no") {
                 $("#attending-yes").addClass("hidden");
-                $("#attending-no").removeClass("hidden");				
+                $("#attending-no").removeClass("hidden");	
+				$("#attending-yes").find("input").prop("required",false);
+                $("#attending-no").find("input").prop("required",true);				
             }			
 			else {
                 $("#attending-no").addClass("hidden");
-                $("#attending-yes").removeClass("hidden");							
+                $("#attending-yes").removeClass("hidden");	
+				$("#attending-no").find("input").prop("required",false);
+                $("#attending-yes").find("input").prop("required",true);				
 			}
 		  }
 		  
@@ -309,11 +313,14 @@
 			
 			$("input[type=radio][name=adults]").val($(this).find("input[type=radio]").attr("data"));
 
-            if($("input[type=radio][name=adults]").val()=="2") 
-                $(".adult2").removeClass("hidden");			
-			else
+            if($("input[type=radio][name=adults]").val()=="2") {
+                $(".adult2").removeClass("hidden");	
+				$(".adult2").find("input").prop("required",true);
+			}	
+			else {
                 $(".adult2").addClass("hidden");			
-			
+				$(".adult2").find("input").prop("required",false);
+            }				
 		  }
 
 		});
