@@ -137,10 +137,10 @@
 			      <div class="col-md-6 col-sm-12">
                     <span>Preferred meal</span>						
                     <div class="btn-group" data-toggle="buttons">
-                      <label class="btn meal1-input">
+                      <label class="btn adult1-meal-input">
                         <input type="radio" name='adult1-meal' data="beef"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Beef</span>
                       </label>
-                      <label class="btn meal1-input">
+                      <label class="btn adult1-meal-input">
                         <input type="radio" name='adult1-meal' data="seabass"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Seabass</span>
                       </label>              
                     </div>
@@ -156,10 +156,10 @@
 			      <div class="col-md-6 col-sm-12">
                     <span>Preferred meal</span>						
                     <div class="btn-group" data-toggle="buttons">
-                      <label class="btn meal2-input">
+                      <label class="btn adult2-meal-input">
                         <input type="radio" name='adult2-meal' data="beef"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Beef</span>
                       </label>
-                      <label class="btn meal2-input">
+                      <label class="btn adult2-meal-input">
                         <input type="radio" name='adult2-meal' data="seabass"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Seabass</span>
                       </label>              
                     </div>
@@ -320,6 +320,7 @@
 			else {
                 $(".adult2").addClass("hidden");			
 				$(".adult2").find("input").prop("required",false);
+			    $(".adult2").find("input").val("n/a");
             }				
 		  }
 
@@ -377,30 +378,30 @@
 
 		});		
 
-	    $(".meal1-input").click(function () {	
+	    $(".adult1-meal-input").click(function () {	
 		  if(!$(this).hasClass("active")) {		  
-			$(".meal1-input.active").find(".fa").toggleClass("hidden");
-			$(".meal1-input.active").find("input[type=radio]").prop("checked",false);
-            $(".meal1-input.active").find(".fa").toggleClass("active");		  			
+			$(".adult1-meal-input.active").find(".fa").toggleClass("hidden");
+			$(".adult1-meal-input.active").find("input[type=radio]").prop("checked",false);
+            $(".adult1-meal-input.active").find(".fa").toggleClass("active");		  			
 		    $(this).toggleClass("active");
 			$(this).find("input[type=radio]").prop("checked",true)
 			$(this).find(".fa").toggleClass("hidden");
 			
-			$("input[type=radio][name=meal1]").val($(this).find("input[type=radio]").attr("data"));	
+			$("input[type=radio][name=adult1-meal]").val($(this).find("input[type=radio]").attr("data"));	
 		  }
 
 		});	
 		
-	    $(".meal2-input").click(function () {	
+	    $(".adult2-meal-input").click(function () {	
 		  if(!$(this).hasClass("active")) {		  
-			$(".meal2-input.active").find(".fa").toggleClass("hidden");
-			$(".meal2-input.active").find("input[type=radio]").prop("checked",false);
-            $(".meal2-input.active").find(".fa").toggleClass("active");		  			
+			$(".adult2-meal-input.active").find(".fa").toggleClass("hidden");
+			$(".adult2-meal-input.active").find("input[type=radio]").prop("checked",false);
+            $(".adult2-meal-input.active").find(".fa").toggleClass("active");		  			
 		    $(this).toggleClass("active");
 			$(this).find("input[type=radio]").prop("checked",true)
 			$(this).find(".fa").toggleClass("hidden");
 			
-			$("input[type=radio][name=meal2]").val($(this).find("input[type=radio]").attr("data"));	
+			$("input[type=radio][name=adult2-meal]").val($(this).find("input[type=radio]").attr("data"));	
 		  }
 
 		});	
