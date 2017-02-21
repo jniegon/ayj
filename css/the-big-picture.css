@@ -76,9 +76,19 @@ body {
     letter-spacing: 10px;	
 }
 
-#friday-sign-small,
-#friday-sign-big,
-#sunday-sign-small,
-#sunday-sign-big {
+.sign {
     cursor: pointer;
+}
+
+.carousel-control.bottom {
+    background-image:none;
+	top:110%;
+	color:#000000;
+	text-shadow: none;
+}
+
+@media (max-height: 700px) {
+  .hidden-xs-height {
+    display: none !important;
+  }
 }
