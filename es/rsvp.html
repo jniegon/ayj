@@ -14,9 +14,12 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+	
     <!-- Custom CSS -->
     <link href="../css/the-big-picture.css" rel="stylesheet">
+    <link href="../css/touch-friendly.css" rel="stylesheet">
+	
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,8 +56,8 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">La Boda <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                         <li><a href="wedding.html">Ceremonia y Celebración</a></li>
-                        <li><a href="other.html">Otros Eventos</a></li>		
-                        <li><a href="wear.html">¿Qué llevar?</a></li>						
+                        <li><a href="other.html">Otros Eventos</a></li>	
+                        <li><a href="wear.html">¿Qué ponerse?</a></li>							
                       </ul>
                     </li>
                     <li class="dropdown">
@@ -88,32 +91,289 @@
     <!-- Page Content -->
     <div class="container cactus-baskerville">
 		
-        <div class="row" style="padding:50px;">
-            <div class="col-md-6 col-sm-12">
-
-
+		<div class="row text-center" style="padding-top:25px;">
+		    <p>Por favor, confirma tu asistencia antes del 31 de Marzo</p>
+			<p>Si tienes preguntas, comentarios, o necesitas cambiar tu confirmación, envíanos un correo a <strong>alanayjesus@gmail.com</strong></p>
+		</div>
+		
+		<form action="https://formspree.io/alanayjesus@gmail.com" method="POST">  
+	      <div class="row">
+            <div class="col-md-6 col-sm-12"  style="padding-top:20px;">
+                <span>¿Contamos contigo?</span>						
+                <div class="btn-group" data-toggle="buttons">
+              
+                  <label class="btn attending-input">
+                    <input type="radio" name='attending' data="yes" required><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> SÍ</span>
+                  </label>
+                  <label class="btn attending-input">
+                    <input type="radio" name='attending' data="no" required><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> NO</span>
+                  </label>
+			    </div>				
 			</div>
-            <div class="col-md-6 col-sm-12">
+			<!-- .col-md-6 col-sm-12 -->
+		  </div>
+          <!-- .row -->
+		  <div id="attending-yes">
+  		    <div class="row" style="padding-top:20px;">
+              <div class="col-md-6 col-sm-12">
+                <span>¿Cuántos adultos venís?</span>						
+                <div class="btn-group" data-toggle="buttons">
+                
+                    <label class="btn adults-input">
+                      <input type="radio" name='adults' data="1"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> 1</span>
+                    </label>
+                    <label class="btn adults-input">
+                      <input type="radio" name='adults' data="2"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> 2</span>
+                    </label>
+                
+                </div></br>				
+			    <div class="row">
+			      <div class="col-md-5 col-sm-12">
+			        <div class="form-group">
+			          <span>Nombre</span>
+			  	      <input id="name1-input" type="text" name="adult1-name" class="form-control" style="font-size: 20px;">
+			        </div>
+				  </div>  
+			      <div class="col-md-7 col-sm-12">
+                    <span>Plato preferido (Sábado)</span>						
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn adult1-meal-input">
+                        <input type="radio" name='adult1-meal' data="beef"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Lomo de Ternera</span>
+                      </label>
+                      <label class="btn adult1-meal-input">
+                        <input type="radio" name='adult1-meal' data="seabass"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Lubina</span>
+                      </label>              
+                    </div>
+              	  </div>
+                </div>				  
+			    <div class="row adult2 hidden">
+			      <div class="col-md-5 col-sm-12">
+			        <div class="form-group">
+			          <span>Nombre (Adulto 2)</span>
+			  	      <input id="name2-input" type="text" name="adult2-name" class="form-control" style="font-size: 20px;">
+			        </div>
+				  </div>  
+			      <div class="col-md-7 col-sm-12">
+                    <span>Plato preferido (Sábado)</span>						
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn adult2-meal-input">
+                        <input type="radio" name='adult2-meal' data="beef"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Lomo de Ternera</span>
+                      </label>
+                      <label class="btn adult2-meal-input">
+                        <input type="radio" name='adult2-meal' data="seabass"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Lubina</span>
+                      </label>              
+                    </div>
+              	  </div>
+				</div>
+				<span style="font-size: 18px;">*Si traes niños, por favor envíanos un correo a alanayjesus@gmail.com</span>							    
+			  </div>
 
+          
+              <div class="col-md-6 col-sm-12">
+		      
+                <span>¿Te unirás a los eventos del viernes y domingo?</span>						
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn events-input">
+                      <input type="radio" name='events' data="both"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Ambos</span>
+                    </label>                
+                    <label class="btn events-input">
+                      <input type="radio" name='events' data="friday"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Viernes sólo</span>
+                    </label>
+                    <label class="btn events-input">
+                      <input type="radio" name='events' data="sunday"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Domingo sólo</span>
+                    </label>
+                    <label class="btn events-input">
+                      <input type="radio" name='events' data="none"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> No</span>
+                    </label>
+
+					
+                </div></br>	
+		      
+                <span>¿Te quedas con nosotros en las cabañas el viernes o sábado?</span>						
+                <div class="btn-group" data-toggle="buttons">
+
+                    <label class="btn stay-input">
+                      <input type="radio" name='stay' data="both"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Sí, ambos días</span>
+                    </label>                
+                    <label class="btn stay-input">
+                      <input type="radio" name='stay' data="saturday"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Sólo el sábado</span>
+                    </label>                
+                    <label class="btn stay-input">
+                      <input type="radio" name='stay' data="no"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x hidden"></i><span> Ningún día</span>
+                    </label>
+
+                
+                </div></br>					  
+			    
+			  </div>
+              <!-- .col-md-6 -->	
+		    </div>
+
+			  
+		  </div>
+		  <!-- .attending-yes -->
+	      <div id="attending-no" class="hidden">
+		    <div class="row" style="padding-top:10px;">
+			  <div class="col-md-6 col-sm-12">
+  			    <p>Lamentamos que no puedas estar con nosotros, pero esperamos poder celebrarlo contigo pronto en otra ocasión.</p>
 				
+			    <div class="form-group form-inline">
+			      <span>Nombre</span>
+			  	  <input id="name-motattending-input" type="text" name="adult-notattending-name" class="form-control input-lg" style="width: 80%; margin-left: 45px; font-size: 20px;">
+			    </div>			
+			    <div class="form-group" style="padding-top: 10px;">
+			      <textarea class="form-control" id="input-comments" rows="2" name="comments" placeholder="Deja un comentario si lo deseas..." style="font-size: 20px;"></textarea>
+			    </div>				
+			  </div>
+			  <!-- .col-md-6 col-sm-12 -->
 			</div>
+			<!-- .row -->
+		  </div>
+          <!-- .attending-no-->			
 			
-        </div>
-        <!-- /.row -->
+		  </div>
+          <!-- .row -->		  
+          <input type="text" name="_gotcha" style="display:none" />		  
+		  <input type="hidden" name="_next" value="https://alanayjesus.com/en/thanks.html" />
+		  <div class="row" style="padding-top: 20px;">
+            <button type="submit" class="btn btn-lg btn-success col-md-4 col-md-offset-4">Enviar</button>				
+		  </div>	
+		  <span class="col-md-4 col-md-offset-4"style="font-size: 14px;">*Asegúrate de completar el reto anti-spam después de hacer click.</span>		  
+	    </form>	
+		
     </div>
     <!-- /.container -->
   </div>
   <!-- /.wrap -->
   
-  <div class="navbar-fixed-bottom hidden-sm hidden-xs">
+  <div class="navbar-fixed-bottom hidden-sm hidden-xs hidden-xs-height">
     <img src="../img/cactus_footer.jpg"></img>
-  </div>    
+  </div>  
   
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+	
+	<script>
+	    $(".attending-input").click(function () {	
+		  
+		  if(!$(this).hasClass("active")) {
+			$(".attending-input.active").find(".fa").toggleClass("hidden");
+			$(".attending-input.active").find("input[type=radio]").prop("checked",false);
+            $(".attending-input.active").find(".fa").toggleClass("active");		  			
+		    $(this).toggleClass("active");
+			$(this).find("input[type=radio]").prop("checked",true)
+			$(this).find(".fa").toggleClass("hidden");
+			
+			$("input[type=radio][name=attending]").val($(this).find("input[type=radio]").attr("data"));	
+
+            if($("input[type=radio][name=attending]").val()=="no") {
+                $("#attending-yes").addClass("hidden");
+                $("#attending-no").removeClass("hidden");	
+				$("#attending-yes").find("input").prop("required",false);
+                $("#attending-no").find("input").prop("required",true);		
+				$("#input-comments").prop("required",false);				
+            }			
+			else {
+                $("#attending-no").addClass("hidden");
+                $("#attending-yes").removeClass("hidden");	
+				$("#attending-no").find("input").prop("required",false);
+                $("#attending-yes").find("input").prop("required",true);								
+			}
+		  }
+		  
+
+		});
+
+	    $(".adults-input").click(function () {	
+		  
+		  if(!$(this).hasClass("active")) {
+			$(".adults-input.active").find(".fa").toggleClass("hidden");
+			$(".adults-input.active").find("input[type=radio]").prop("checked",false);
+            $(".adults-input.active").find(".fa").toggleClass("active");		  			
+		    $(this).toggleClass("active");
+			$(this).find("input[type=radio]").prop("checked",true)
+			$(this).find(".fa").toggleClass("hidden");
+			
+			$("input[type=radio][name=adults]").val($(this).find("input[type=radio]").attr("data"));
+
+            if($("input[type=radio][name=adults]").val()=="2") {
+                $(".adult2").removeClass("hidden");	
+			    $(".adult2").find("input").val("");				
+				$(".adult2").find("input").prop("required",true);			
+			}	
+			else {
+                $(".adult2").addClass("hidden");			
+				$(".adult2").find("input").prop("required",false);
+			    $(".adult2").find("input").val("n/a");
+            }				
+		  }
+
+		});
+
+
+	    $(".events-input").click(function () {	
+		  if(!$(this).hasClass("active")) {		  
+			$(".events-input.active").find(".fa").toggleClass("hidden");
+			$(".events-input.active").find("input[type=radio]").prop("checked",false);
+            $(".events-input.active").find(".fa").toggleClass("active");		  			
+		    $(this).toggleClass("active");
+			$(this).find("input[type=radio]").prop("checked",true)
+			$(this).find(".fa").toggleClass("hidden");
+			
+			$("input[type=radio][name=events]").val($(this).find("input[type=radio]").attr("data"));	
+		  }
+
+		});		
+
+	    $(".stay-input").click(function () {	
+		  if(!$(this).hasClass("active")) {		  
+			$(".stay-input.active").find(".fa").toggleClass("hidden");
+			$(".stay-input.active").find("input[type=radio]").prop("checked",false);
+            $(".stay-input.active").find(".fa").toggleClass("active");		  			
+		    $(this).toggleClass("active");
+			$(this).find("input[type=radio]").prop("checked",true)
+			$(this).find(".fa").toggleClass("hidden");
+			
+			$("input[type=radio][name=stay]").val($(this).find("input[type=radio]").attr("data"));	
+		  }
+
+		});		
+
+	    $(".adult1-meal-input").click(function () {	
+		  if(!$(this).hasClass("active")) {		  
+			$(".adult1-meal-input.active").find(".fa").toggleClass("hidden");
+			$(".adult1-meal-input.active").find("input[type=radio]").prop("checked",false);
+            $(".adult1-meal-input.active").find(".fa").toggleClass("active");		  			
+		    $(this).toggleClass("active");
+			$(this).find("input[type=radio]").prop("checked",true)
+			$(this).find(".fa").toggleClass("hidden");
+			
+			$("input[type=radio][name=adult1-meal]").val($(this).find("input[type=radio]").attr("data"));	
+		  }
+
+		});	
+		
+	    $(".adult2-meal-input").click(function () {	
+		  if(!$(this).hasClass("active")) {		  
+			$(".adult2-meal-input.active").find(".fa").toggleClass("hidden");
+			$(".adult2-meal-input.active").find("input[type=radio]").prop("checked",false);
+            $(".adult2-meal-input.active").find(".fa").toggleClass("active");		  			
+		    $(this).toggleClass("active");
+			$(this).find("input[type=radio]").prop("checked",true)
+			$(this).find(".fa").toggleClass("hidden");
+			
+			$("input[type=radio][name=adult2-meal]").val($(this).find("input[type=radio]").attr("data"));	
+		  }
+
+		});	
+		
+		
+	</script>
+	
+
  
 </body>
 

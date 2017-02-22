@@ -53,8 +53,8 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">La Boda <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                         <li><a href="wedding.html">Ceremonia y Celebración</a></li>
-                        <li><a href="other.html">Otros Eventos</a></li>			
-                        <li><a href="wear.html">¿Qué llevar?</a></li>						
+                        <li><a href="other.html">Otros Eventos</a></li>	
+                        <li><a href="wear.html">¿Qué ponerse?</a></li>							
                       </ul>
                     </li>
                     <li class="dropdown">
@@ -87,25 +87,44 @@
 	
     <!-- Page Content -->
     <div class="container cactus-baskerville">
+	  <div class="row text-center"  style="padding-top: 25px;">
+	  	  <div class="sign" data="friday" style="display:inline-block;">
+	        <img class="small hidden" src="../img/viernesSignSmall.jpg">		  	      
+		    <img class="big" src="../img/viernesSignBig.jpg">
+		  </div>
+  	      <div class="sign" data="sunday" style="display:inline-block;">		  
+	        <img class="small" src="../img/domingoSignSmall.jpg">		  	      
+		    <img class="big hidden" src="../img/domingoSignBig.jpg">
+		  </div>
+	  </div>
+	  <div id="friday" class="row section" style="padding-top: 25px;">	
+        <div class="col-md-6 col-sm-12 text-center" style="padding: 50px;">
+		    <p class="cactus-futura" style="font-size: 28px;"><strong>FIESTA DE BIENVENIDA</strong></p>	
+			<p style="padding-top:10px;">Si estás en Austin el viernes por la noche, únete a la fiesta en The River House con <a target="_blank" href="http://www.huffingtonpost.com/one-for-the-table/a-look-at-austins-food-tr_b_2861623.html">puestos de comida</a>, bebidas y juegos al aire libre.</p>
+		    <p class="cactus-futura" style="font-size: 28px; padding-top: 15px;">Viernes, 28 de Abril</br>6.30pm - 9.30pm</p></br>				
+		</div>
+        <div class="col-md-6 col-sm-12">
+			<img src="../img/foodtruck.jpg" width="100%"></img>
+        </div>		
+	  </div>	
 		
-        <div class="row" style="padding:50px;">
-            <div class="col-md-6 col-sm-12">
-
-
-			</div>
-            <div class="col-md-6 col-sm-12">
-
-				
-			</div>
-			
+	  <div id="sunday" class="row section hidden" style="padding-top: 25px;">			
+        <div class="col-md-6 col-sm-12 text-center" style="padding: 50px;">
+		    <p class="cactus-futura" style="font-size: 28px;"><strong>ALMUERZO DE DESPEDIDA</strong></p>	
+			<p style="padding-top:10px;">Nadie debería irse de Austin si probar la comida nativa más icónica - <a target="_blank" href="http://austin.eater.com/2016/2/19/11060078/breakfast-taco-austin-history">¡los tacos de desayuno!</a> El domingo por la mañana tendremos tacos y café en The River House.</p>
+		    <p class="cactus-futura" style="font-size: 28px; padding-top: 15px;">Domingo, 30 de Abril</br>10am - 12pm</p>	
+		</div>	  
+        <div class="col-md-6 col-sm-12">
+			<img src="../img/breakfastTacos.jpg" height="100%"></img>		
+			<p class="text-center"></p>
         </div>
-        <!-- /.row -->
+		
     </div>
     <!-- /.container -->
   </div>
   <!-- /.wrap -->
   
-  <div class="navbar-fixed-bottom hidden-sm hidden-xs">
+  <div class="navbar-fixed-bottom hidden-sm hidden-xs hidden-xs-height">
     <img src="../img/cactus_footer.jpg"></img>
   </div>  
   
@@ -114,6 +133,19 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+	    $(".sign").mouseover(function () {
+		    $(".sign").find(".big").addClass("hidden");		
+		    $(".sign").find(".small").removeClass("hidden");
+            $(this).find(".small").addClass("hidden");		
+		    $(this).find(".big").removeClass("hidden");
+			$(".section").addClass("hidden");
+			$("#" + $(this).attr("data")).removeClass("hidden");			
+        });	
+		
+    </script>		
+	
  
 </body>
 
